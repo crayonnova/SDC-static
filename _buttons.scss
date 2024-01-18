@@ -1,0 +1,58 @@
+@import 'variables';
+
+.btn,.btn-hover {
+    color: map-get($colors, 'white');
+    background-color: map-get($colors, 'black');
+    padding: 0.4rem;
+    border-radius: $border-radius;
+}
+
+.tag-base {
+    padding: 0.2rem 0.9rem;
+    border-radius: $border-radius;
+    width: fit-content;
+    border: 2.5px solid map-get($colors, 'black');
+    font-weight: 600;
+
+    &.tag-dot::before {
+        content: '•';
+        font-size: 1rem;
+    }
+}
+
+.tag {
+    @extend .tag-base;
+    color: map-get($colors, 'black');
+    border-color: map-get($colors, 'white');
+    background-color: map-get($colors, 'white');
+}
+
+.tag-outline {
+    @extend .tag-base;
+    color: map-get($colors, 'black');
+    background-color: transparent;
+}
+
+.tag-black {
+    @extend .tag-base;
+    color: map-get($colors, 'white');
+    background-color: map-get($colors, 'black');
+}
+
+.btn-outline {
+    color: map-get($colors, 'white');
+    background-color: transparent;
+}
+
+.tag-circle {
+    transform: rotate(45deg);
+    will-change: transform;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid map-get($colors, 'white');
+    color: map-get($colors, 'white');
+    background-color: #8e8e8e5f;
+    font-weight: 600;
+}

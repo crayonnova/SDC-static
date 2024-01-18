@@ -1,0 +1,73 @@
+.ct {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  
+    @media (min-width: 576px) { max-width: 540px; }
+    @media (min-width: 768px) { max-width: 720px; }
+    @media (min-width: 992px) { max-width: 1200px; }
+  }
+  
+  .ct-f {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .r {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .c {
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    max-width: 100%;
+  
+    @for $i from 1 through 12 {
+      &-#{$i} {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+      }
+    }
+  
+    @media (max-width: 576px) {
+      @for $i from 1 through 12 {
+        &-s-#{$i} {
+          flex: 0 0 percentage($i / 12);
+          max-width: percentage($i / 12);
+        }
+      }
+    }
+  
+    @media (min-width: 768px) {
+      @for $i from 1 through 12 {
+        &-m-#{$i} {
+          flex: 0 0 percentage($i / 12);
+          max-width: percentage($i / 12);
+        }
+      }
+    }
+  
+    @media (min-width: 992px) {
+      @for $i from 1 through 12 {
+        &-l-#{$i} {
+          flex: 0 0 percentage($i / 12);
+          max-width: percentage($i / 12);
+        }
+      }
+    }
+  }
+
+[class^='c-'] {
+  // border: 1px solid greenyellow;
+}
