@@ -31,7 +31,10 @@
         </div>
         <div class="c-2">
           <div class="flex flex-row justify-content-end">
-            <img src="./cart.svg" alt="cart">
+            <div class="p-relative">
+              <span id="cart-count">0</span>
+              <img src="./cart.svg" alt="cart">
+            </div>
           </div>
         </div>
       </nav>
@@ -48,13 +51,13 @@
               <div class="slides">
                 <div class="card first-banner flex flex-row p-relative d-f">
                   <div class="card-top-left">
-                    <div class="flex flex-column p-absolute t-0">
+                    <div class="flex flex-column t-0">
                       <div class="tag">Simple and comfy</div>
                       <div class="tag-outline mt-1 tag-dot">BEKANT</div>
                     </div>
                   </div>
                   <div class="card-bottom-right">
-                    <div class="flex flex-row p-absolute t-0">
+                    <div class="flex flex-row t-0">
                       <div class="tag-circle flex align-items-center justify-content-center cursor-pointer">
                         SHOP NOW
                       </div>
@@ -63,13 +66,13 @@
                 </div>
                 <div class="card second-banner flex flex-row p-relative d-n">
                   <div class="card-top-left">
-                    <div class="flex flex-column p-absolute t-0">
+                    <div class="flex flex-column t-0">
                       <div class="tag">Long Hour Work</div>
                       <div class="tag-outline mt-1 tag-dot">CEKANT</div>
                     </div>
                   </div>
                   <div class="card-bottom-right">
-                    <div class="flex flex-row p-absolute t-0">
+                    <div class="flex flex-row t-0">
                       <div class="tag-circle flex align-items-center justify-content-center cursor-pointer">
                         SHOP NOW
                       </div>
@@ -78,13 +81,13 @@
                 </div>
                 <div class="card third-banner flex flex-row p-relative d-n">
                   <div class="card-top-left">
-                    <div class="flex flex-column p-absolute t-0">
+                    <div class="flex flex-column t-0">
                       <div class="tag">Budget-friendly</div>
                       <div class="tag-outline mt-1 tag-dot">LE PANE CONFORT</div>
                     </div>
                   </div>
                   <div class="card-bottom-right">
-                    <div class="flex flex-row p-absolute t-0">
+                    <div class="flex flex-row t-0">
                       <div class="tag-circle flex align-items-center justify-content-center cursor-pointer">
                         SHOP NOW
                       </div>
@@ -99,10 +102,10 @@
               </div>
             </div>
           </div>
-          <div class="c-s-12 c-m-12 c-l-4 p-1 flex flex-column gap-1">
+          <div id="home-benefit" class="c-s-12 c-m-12 c-l-4 p-1 flex flex-column gap-1">
             <div class="card benefit-banner flex flex-row p-relative h-100">
               <div class="card-top-left">
-                <div class="flex flex-column p-absolute t-0">
+                <div class="flex flex-column t-0">
                   <div class="tag-outline tag-dot mb-1">Benefits</div>
                   <h6>As you desire</h6>
                   <h6 class="mb-1">LIFE LONG HABIT</h6>
@@ -115,7 +118,7 @@
             </div>
             <div class="card rising-desk-banner flex flex-row justify-content-center p-relative h-100">
               <div class="card-bottom-center">
-                <div class="flex flex-row p-absolute t-0">
+                <div class="flex flex-row t-0">
                   <div class="tag">Shop all products →</div>
                 </div>
               </div>
@@ -161,6 +164,9 @@
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
                   </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 1, name: 'BEKANT', price: 3000 })">
+                    Add to cart
+                  </div>
                 </div>
               </div>
               <div class="c-l-3 c-m-4 c-s-12 p-1">
@@ -171,6 +177,9 @@
                   <div class="card-price-tag mx-1">
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
+                  </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 2, name: 'CEKANT', price: 3000 })">
+                    Add to cart
                   </div>
                 </div>
                 <p class="mx-1"></p>
@@ -184,6 +193,9 @@
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
                   </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 3, name: 'LE PANE CONFORT', price: 3000 })">
+                    Add to cart
+                  </div>
                 </div>
                 <p class="mx-1"></p>
               </div>
@@ -195,6 +207,9 @@
                   <div class="card-price-tag mx-1">
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
+                  </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 4, name: 'SICK ADJE', price: 3000 })">
+                    Add to cart
                   </div>
                 </div>
                 <p class="mx-1"></p>
@@ -216,7 +231,9 @@
           </div>
           <div class="c-l-6 c-m-6 c-s-12 p-1">
             <div class="card m-1 p-relative">
-              <img class="card-img" src="./images/health-benefit-1.png" alt="Health benefit 1">
+              <div class="card-img overflow-hidden">
+                <iframe width="504" height="504" src="https://www.youtube.com/embed/Ig4OgfjkCZ8?si=38S94XhW71Z-R6vt" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
               <p class="card-title mx-1 py-3">1. Standing Lowers Your Risk of Weight Gain and Obesity</p>
               <p class="card-sub mx-1">
                 Weight gain is ultimately caused by taking in more calories than you burn.
@@ -314,5 +331,6 @@
         }
       });
     </script>
+    <script src="cart.js"></script>
   </body>
 </html>

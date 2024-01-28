@@ -31,7 +31,11 @@
         </div>
         <div class="c-2">
           <div class="flex flex-row justify-content-end">
-            <img src="./cart.svg" alt="cart">
+            <div class="p-relative">
+              <span id="cart-count">0</span>
+              <img src="./cart.svg" alt="cart">
+            </div>
+          </div>
           </div>
         </div>
       </nav>
@@ -67,6 +71,9 @@
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
                   </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 1, name: 'BEKANT', price: 3000 })">
+                    Add to cart
+                  </div>
                 </div>
               </div>
               <div class="c-l-3 c-m-4 c-s-12 p-1">
@@ -77,6 +84,9 @@
                   <div class="card-price-tag mx-1">
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
+                  </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 2, name: 'CEKANT', price: 3000 })">
+                    Add to cart
                   </div>
                 </div>
                 <p class="mx-1"></p>
@@ -90,6 +100,9 @@
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
                   </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 3, name: 'LE PANE CONFORT', price: 3000 })">
+                    Add to cart
+                  </div>
                 </div>
                 <p class="mx-1"></p>
               </div>
@@ -102,6 +115,9 @@
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
                   </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 4, name: 'SICK ADJE', price: 3000 })">
+                    Add to cart
+                  </div>
                 </div>
                 <p class="mx-1"></p>
               </div>
@@ -113,6 +129,9 @@
                   <div class="card-price-tag mx-1">
                     <div class="card-price-tag__base">3000</div>
                     <div class="card-price-tag__discount">2300</div>
+                  </div>
+                  <div class="card-addToCart my-2" onclick="addItemToCart({ id: 5, name: 'ELEVE HIGH', price: 3000 })">
+                    Add to cart
                   </div>
                 </div>
                 <p class="mx-1"></p>
@@ -173,5 +192,6 @@
       });
     });
   </script>
+  <script src="cart.js"></script>
   </body>
 </html>

@@ -901,6 +901,19 @@ h1 span {
 .card:hover {
   transform: scale(1.009);
 }
+.card-addToCart {
+  background-color: #8e8e8e;
+  color: #ffffff;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.card-addToCart:hover {
+  background-color: #e06635;
+}
 .card-top-left {
   position: absolute;
   top: 1rem;
@@ -1286,6 +1299,37 @@ h1 span {
   margin-bottom: 2rem;
 }
 
+input[type=text],
+input[type=email],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #faf9f9;
@@ -1389,6 +1433,38 @@ footer #sub-footer {
   cursor: pointer;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.p-relative {
+  position: relative !important;
+}
+
+.p-absolute {
+  position: absolute !important;
+}
+
+#cart-count {
+  position: absolute;
+  width: auto;
+  min-width: 25px;
+  height: auto;
+  min-height: 25px;
+  color: white;
+  background-color: #e06635;
+  border-radius: 5rem;
+  text-align: center;
+  top: -14px;
+  right: -14px;
+}
+
+@media screen and (max-width: 991.5px) {
+  #home-benefit {
+    display: none !important;
+  }
+}
+
 .d-n {
   display: none !important;
 }
@@ -1399,35 +1475,4 @@ footer #sub-footer {
 
 .d-f {
   display: flex !important;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-input[type=text]:focus,
-input[type=email]:focus,
-textarea:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-textarea {
-  height: auto;
-  resize: vertical;
 }/*# sourceMappingURL=style.css.map */

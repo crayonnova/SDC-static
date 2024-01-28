@@ -78,6 +78,20 @@
     transform: scale(1.009);
   }
 
+  &-addToCart {
+    background-color: map-get($colors, "grey");
+    color: map-get($colors, "white");
+    width: fit-content;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      background-color: map-get($colors, "rose");
+    }
+  }
+
   &-top-left {
     position: absolute;
     top: 1rem;

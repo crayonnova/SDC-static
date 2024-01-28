@@ -31,7 +31,10 @@
         </div>
         <div class="c-2">
           <div class="flex flex-row justify-content-end">
-            <img src="./cart.svg" alt="cart">
+            <div class="p-relative">
+              <span id="cart-count">0</span>
+              <img src="./cart.svg" alt="cart">
+            </div>
           </div>
         </div>
       </nav>
@@ -48,7 +51,9 @@
           </div>
           <div class="c-l-6 c-m-6 c-s-12 p-1">
             <div class="card m-1 p-relative">
-              <img class="card-img" src="./images/health-benefit-1.png" alt="Health benefit 1">
+              <div class="card-img overflow-hidden">
+                <iframe width="504" height="504" src="https://www.youtube.com/embed/Ig4OgfjkCZ8?si=38S94XhW71Z-R6vt" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
               <p class="card-title mx-1 py-3">1. Standing Lowers Your Risk of Weight Gain and Obesity</p>
               <p class="card-sub mx-1">
                 Weight gain is ultimately caused by taking in more calories than you burn.
@@ -181,5 +186,6 @@
         </div>
       </div>
     </footer> 
+    <script src="cart.js"></script>
   </body>
 </html>

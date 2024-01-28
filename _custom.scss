@@ -107,6 +107,38 @@ footer {
   cursor: pointer;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.p-relative {
+  position: relative !important;
+}
+
+.p-absolute {
+  position: absolute !important;
+}
+
+#cart-count {
+  position: absolute;
+  width: auto;
+  min-width: 25px;
+  height: auto;
+  min-height: 25px;
+  color: white;
+  background-color: map-get($colors, "rose");
+  border-radius: 5rem;
+  text-align: center;
+  top: -14px;
+  right: -14px;
+}
+
+#home-benefit {
+  @media screen and (max-width: 991.5px) {
+    display: none !important;
+  }
+}
+
 .d-n {
   display: none !important;
 }
