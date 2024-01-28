@@ -19,9 +19,9 @@
             <li class="dropdown">
               Products
               <div class="dropdown-content flex-column p-1">
-                <a href="#">HermanMiller</a>
-                <a href="#">Famery</a>
-                <a href="#">emeco</a>
+                <a href="./rising-desks.html?search=BEKANT">BEKANT</a>
+                <a href="./rising-desks.html?search=CEKANT">CEKANT</a>
+                <a href="./rising-desks.html?search=LE PANE CONFORT">LE PANE CONFORT</a>
               </div>
             </li>
             <li><a href="./rising-desks.html">Rising Desks</a></li>
@@ -180,7 +180,17 @@
   <script>
     const searchBar = document.getElementById("product-search");
     searchBar.addEventListener("keyup", (e) => {
-      const searchString = e.target.value.toLowerCase();
+      searchProduct(e.target.value.toLowerCase());
+    });
+
+    const queryParams = new URLSearchParams(window.location.search);
+    console.log(queryParams.get('search'));
+    if (queryParams.get('search')) {
+      searchBar.value = queryParams.get('search');
+      searchProduct(queryParams.get('search').toLocaleLowerCase());
+    }
+
+    function searchProduct(searchString) {
       const products = document.querySelectorAll(".card");
       products.forEach((product) => {
         const productName = product.querySelector(".card-title").innerText.toLowerCase();
@@ -190,7 +200,7 @@
           product.parentElement.style.display = "none";
         }
       });
-    });
+    }
   </script>
   <script src="cart.js"></script>
   </body>
